@@ -3,6 +3,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import { MdKeyboardArrowRight } from 'react-icons/md';
 import { media } from '../../../styles';
+import Logo from '../logo-dark.svg';
 
 // Styles
 const Container = styled.div`
@@ -47,13 +48,13 @@ const PanePart = styled.div`
   }
 
   &.logo {
-    flex: 0 0 8.333333%;
-    max-width: 8.333333%;
+    flex: 0 0 20.333333%;
+    max-width: 20.333333%;
   }
 
   &.copy {
-    flex: 0 0 58.333333%;
-    max-width: 58.333333%;
+    flex: 0 0 46.333333%;
+    max-width: 46.333333%;
     p {
       font-size: 0.8rem;
       line-height: 26px;
@@ -67,8 +68,8 @@ const PanePart = styled.div`
     max-width: 33.333333%;
     justify-content: flex-end;
   }
-  img {
-    height: 32px;
+  svg {
+    overflow: hidden;
   }
 `;
 
@@ -110,11 +111,16 @@ const Copyright: React.FC<Props> = () => {
         <div className="pane">
           <PanePart className="logo">
             <Link href="/">
-              <a>Logo Image</a>
+              <a>
+                <Logo />
+              </a>
             </Link>
           </PanePart>
           <PanePart className="copy">
-            <p>Copyright(c) 2021. All Right Reserved</p>
+            <p>
+              Copyright(c) 2021. All Right Reserved. 사업자등록번호 298-53-00578
+              (김승현)
+            </p>
           </PanePart>
           <PanePart className="link">
             <EtcLink>

@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
 import { media } from '../../../styles';
+import Logo from '../logo.svg';
 
 // Styles
 const Container = styled.div`
@@ -28,10 +29,12 @@ const Top: React.FC<Props> = ({}) => {
   return (
     <Container>
       <Link href="/">
-        <a>Logo</a>
+        <a>
+          <Logo />
+        </a>
       </Link>
 
-      <div>Search</div>
+      {/* Todo Component */}
     </Container>
   );
 };

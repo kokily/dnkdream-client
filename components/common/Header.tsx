@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 import useHeaderScroll from '../../hooks/useHeaderScroll';
 import { media } from '../../styles';
 import Top from './header/Top';
+import HeaderNav from './nav/HeaderNav';
 
 // Styles
 const Container = styled.div`
@@ -40,7 +41,6 @@ const HeaderTop = styled.header<{ move: number }>`
     `}
 `;
 
-/*
 const NavContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -57,7 +57,6 @@ const NavContainer = styled.div`
     width: 100%;
   }
 `;
-*/
 
 interface Props {}
 
@@ -69,6 +68,9 @@ const Header: React.FC<Props> = () => {
       <HeaderTop move={move}>
         <Top />
       </HeaderTop>
+      <NavContainer>
+        <HeaderNav />
+      </NavContainer>
     </Container>
   );
 };

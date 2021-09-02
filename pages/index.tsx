@@ -8,7 +8,55 @@ const Test = styled.div`
 `;
 
 function IndexPage() {
-  return <PageTemplate>IndexPage</PageTemplate>;
+  return (
+    <PageTemplate>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+      <h2>Index Page</h2>
+    </PageTemplate>
+  );
 }
 
 export default IndexPage;
