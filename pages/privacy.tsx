@@ -1,23 +1,8 @@
 import PageTemplate from '../components/common/PageTemplate';
 
-function IndexPage() {
+function PrivacyPage() {
   return (
     <PageTemplate>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
       <h2>Index Page</h2>
       <h2>Index Page</h2>
       <h2>Index Page</h2>
@@ -52,4 +37,4 @@ function IndexPage() {
   );
 }
 
-export default IndexPage;
+export default PrivacyPage;
