@@ -9,6 +9,7 @@ const Container = styled.nav<Props>`
   display: flex;
   justify-content: center;
   width: 100%;
+
   ${media.medium} {
     max-height: 50vh;
     overflow: hidden;

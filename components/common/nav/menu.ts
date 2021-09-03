@@ -7,7 +7,7 @@ export const Menu = [
   {
     id: 1,
     title: '공지사항',
-    url: '/notice',
+    url: '/notices',
   },
   {
     id: 2,

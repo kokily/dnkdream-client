@@ -1,10 +1,14 @@
 import Head from 'next/head';
 import { AppProps } from 'next/app';
 import { ApolloProvider } from '@apollo/client';
+import { ToastContainer } from 'react-toastify';
 import { useApollo } from '../libs/apollo';
 import { GlobalStyle } from '../styles';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App({ Component, pageProps }: AppProps) {
+  const client = useApollo(pageProps);
+
   return (
     <>
       <Head>
@@ -33,6 +37,7 @@ function App({ Component, pageProps }: AppProps) {
 
       <ApolloProvider client={client}>
         <Component {...pageProps} />
+        <ToastContainer position="top-center" draggable={false} />
       </ApolloProvider>
     </>
   );

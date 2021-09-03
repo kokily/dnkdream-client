@@ -23,9 +23,11 @@ const HamburgerWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
+
   ${media.medium} {
     width: 100%;
   }
+
   .wrapper {
     display: flex;
     justify-content: flex-end;
@@ -35,14 +37,17 @@ const HamburgerWrapper = styled.div`
     transition: 0.2s all;
     width: 100%;
     max-width: 694.11px;
+
     svg {
       padding: 5px;
       border-radius: 3px;
       cursor: pointer;
+
       &.off {
         background: #6799ff;
         color: white;
       }
+
       &.on {
         background: white;
         color: #6799ff;
