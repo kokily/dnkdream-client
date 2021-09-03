@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import useHeaderScroll from '../../hooks/useHeaderScroll';
+import useHeaderScroll from '../../libs/hooks/useHeaderScroll';
 import { media } from '../../styles';
 import Top from './header/Top';
 import HeaderNav from './nav/HeaderNav';

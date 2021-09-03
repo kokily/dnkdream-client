@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { IoMdClose } from 'react-icons/io';
 import { GiHamburgerMenu } from 'react-icons/gi';
-import useHamburgerToggle from '../../../hooks/useHamburgerToggle';
-import useMedia from '../../../hooks/useMedia';
+import useHamburgerToggle from '../../../libs/hooks/useHamburgerToggle';
+import useMedia from '../../../libs/hooks/useMedia';
 import { media } from '../../../styles';
 import HeaderNavList from './HeaderNavList';
 

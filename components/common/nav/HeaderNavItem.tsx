@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 import HeaderNavSubList from './HeaderNavSubList';
 import { media } from '../../../styles';
-import useMedia from '../../../hooks/useMedia';
+import useMedia from '../../../libs/hooks/useMedia';
 
 // Styles
 const Container = styled.li`

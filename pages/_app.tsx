@@ -1,5 +1,7 @@
-import { AppProps } from 'next/app';
 import Head from 'next/head';
+import { AppProps } from 'next/app';
+import { ApolloProvider } from '@apollo/client';
+import { useApollo } from '../libs/apollo';
 import { GlobalStyle } from '../styles';
 
 function App({ Component, pageProps }: AppProps) {
@@ -28,7 +30,10 @@ function App({ Component, pageProps }: AppProps) {
         <link rel="apple-touch-icon" href="/logo512.png" />
       </Head>
       <GlobalStyle />
-      <Component {...pageProps} />
+
+      <ApolloProvider client={client}>
+        <Component {...pageProps} />
+      </ApolloProvider>
     </>
   );
 }
