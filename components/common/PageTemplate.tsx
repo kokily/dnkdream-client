@@ -33,16 +33,6 @@ interface Props {
 }
 
 const PageTemplate: React.FC<Props> = ({ children }) => {
-  const { me, loading } = useAuth();
-
-  useEffect(() => {
-    if (me) {
-      isLogged(true);
-    }
-  }, []);
-
-  if (loading) return <div>Loading...</div>;
-
   return (
     <Container>
       <Layout>

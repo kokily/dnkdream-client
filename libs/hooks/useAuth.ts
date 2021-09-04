@@ -1,4 +1,6 @@
 import { useQuery, gql } from '@apollo/react-hooks';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 
 const ME = gql`
   query Me {
@@ -11,11 +13,12 @@ const ME = gql`
 `;
 
 export default function useAuth() {
-  const { data, loading, error } = useQuery<{ Me: { me: string } }>(ME);
+  const router = useRouter();
+  const { data, loading } = useQuery<{ Me: { me: string } }>(ME);
 
-  return {
-    me: data?.Me.me || null,
-    loading,
-    error,
-  };
+  useEffect(() => {
+    if (!loading && !data?.Me.me) {
+      router.replace('/');
+    }
+  }, [loading, data, router]);
 }

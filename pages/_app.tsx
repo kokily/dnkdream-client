@@ -5,6 +5,7 @@ import { ToastContainer } from 'react-toastify';
 import { useApollo } from '../libs/apollo';
 import { GlobalStyle } from '../styles';
 import 'react-toastify/dist/ReactToastify.css';
+import 'react-quill/dist/quill.snow.css';
 
 function App({ Component, pageProps }: AppProps) {
   const client = useApollo(pageProps);
