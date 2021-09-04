@@ -2,6 +2,7 @@ import React, { useCallback, useState } from 'react';
 import { gql, useMutation } from '@apollo/react-hooks';
 import { useRouter } from 'next/router';
 import { toast } from 'react-toastify';
+import { isLogged } from '../../../libs/store';
 
 const LOGIN = gql`
   mutation Login($password: String!) {
@@ -44,6 +45,8 @@ export default function useLogin() {
       if (!response || !response.data) return;
 
       await client.clearStore();
+
+      isLogged(true);
 
       router.replace('/');
     } catch (err) {

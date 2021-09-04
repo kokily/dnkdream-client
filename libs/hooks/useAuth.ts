@@ -1,6 +1,7 @@
 import { useQuery, gql } from '@apollo/react-hooks';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
+import { isLogged } from '../store';
 
 const ME = gql`
   query Me {
@@ -17,7 +18,8 @@ export default function useAuth() {
   const { data, loading } = useQuery<{ Me: { me: string } }>(ME);
 
   useEffect(() => {
-    if (!loading && !data?.Me.me) {
+    if (!loading && !data.Me.me) {
+      isLogged(false);
       router.replace('/');
     }
   }, [loading, data, router]);

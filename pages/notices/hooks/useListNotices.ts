@@ -1,74 +1,54 @@
-import { useQuery, gql } from '@apollo/react-hooks';
-import { useCallback, useState } from 'react';
-import useScroll from '../../../libs/hooks/useScroll';
+import { useRouter } from 'next/router';
+import React, { useCallback, useState } from 'react';
+import useScrollNotices from './useScrollNotices';
 
-const LIST_NOTICES = gql`
-  query ListNotices($title: String, $tag: String, $cursor: ID) {
-    ListNotices(title: $title, tag: $tag, cursor: $cursor) {
-      ok
-      error
-      notices {
-        id
-        title
-        body
-        thumbnail
-        tags
-        created_at
-        updated_at
-      }
+export default function useListNotices() {
+  const router = useRouter();
+  const [search, setSearch] = useState('');
+  const [title, setTitle] = useState('');
+  const [tag, setTag] = useState('');
+
+  const { data, loading, error } = useScrollNotices(title, tag);
+
+  const onChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearch(e.target.value);
+  }, []);
+
+  const onSearch = (e: React.MouseEvent) => {
+    e.preventDefault();
+
+    if (search === '') {
+      setTitle('');
+    } else {
+      setTitle(search);
     }
-  }
-`;
+  };
 
-export default function useListNotices(title?: string, tag?: string) {
-  const { data, loading, error, fetchMore } = useQuery<{
-    ListNotices: { notices: NoticeType[] };
-  }>(LIST_NOTICES, {
-    variables: { title, tag },
-  });
-  const [isFinished, setIsFinished] = useState(false);
+  const onKeyPress = (
+    e: React.KeyboardEvent<HTMLInputElement> & React.MouseEvent
+  ) => {
+    if (e.key === 'Enter') {
+      onSearch(e);
+    }
+  };
 
-  const onLoadMore = useCallback(
-    (cursor: string) => {
-      fetchMore({
-        variables: {
-          title,
-          tag,
-          cursor,
-        },
-        updateQuery: (prev, { fetchMoreResult }) => {
-          if (!fetchMoreResult) return prev;
-          if (fetchMoreResult.ListNotices.notices.length === 0) {
-            setIsFinished(true);
-          }
+  const onDetail = (id: string) => {
+    router.push(`/notices/${id}`);
+  };
 
-          return {
-            ListNotices: {
-              ...prev.ListNotices,
-              notices: [
-                ...prev.ListNotices.notices,
-                ...fetchMoreResult.ListNotices.notices,
-              ],
-            },
-          };
-        },
-      });
-    },
-    [title, tag, fetchMore]
-  );
-
-  const cursor =
-    data?.ListNotices.notices[data.ListNotices.notices.length - 1]?.id;
-
-  useScroll({
-    cursor,
-    onLoadMore,
-  });
+  const onTag = (tag: string) => {
+    setTag(tag);
+  };
 
   return {
-    data,
+    notices: data?.ListNotices.notices || [],
+    search,
+    onChange,
+    onSearch,
+    onKeyPress,
+    onDetail,
+    onTag,
     loading,
     error,
-    isFinished,
   };
 }
