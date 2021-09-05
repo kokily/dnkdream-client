@@ -15,6 +15,24 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     color: inherit;
   }
+
+  @-webkit-keyframes mask5Up {
+    from {
+      transform: translate(0, 5%);
+    }
+    to {
+      transform: translate(0, 0);
+    }
+  }
+  
+  @keyframes mask5Up {
+    from {
+      transform: translate(0, 5%);
+    }
+    to {
+      transform: translate(0, 0);
+    }
+  }
 `;
 
 const mediaQuery = (max_width: number) => `
