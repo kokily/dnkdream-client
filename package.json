@@ -13,6 +13,7 @@
     "@apollo/react-hooks": "4.0.0",
     "@svgr/webpack": "5.5.0",
     "codemirror": "5.62.3",
+    "date-fns": "2.23.0",
     "deepmerge": "4.2.2",
     "graphql": "15.5.2",
     "isomorphic-unfetch": "3.1.0",
@@ -29,6 +30,7 @@
     "styled-components": "5.3.1"
   },
   "devDependencies": {
+    "@types/date-fns": "2.6.0",
     "@types/marked": "3.0.0",
     "@types/prismjs": "1.16.6",
     "@types/react": "17.0.19",

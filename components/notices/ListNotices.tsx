@@ -21,10 +21,13 @@ const Contents = styled.div`
 `;
 
 const Button = styled.a`
+  display: block;
+  width: 85px;
   height: 40px;
   font-size: 1rem;
   font-weight: 600;
-  padding: 0.4rem 1rem;
+  text-align: center;
+  padding-top: 0.6rem;
   background: white;
   color: #db3603;
   border: 2px solid #db3603;
@@ -55,10 +58,13 @@ const SearchBox = styled.div<{ small: boolean; me: boolean }>`
 
 const TagBox = styled.div`
   width: 100%;
+  display: flex;
+  justify-content: center;
 
   span {
     cursor: pointer;
     color: #6799ff;
+    margin-left: 0.5rem;
     transition: 0.2s all;
     &:hover {
       color: #f15f5f;
