@@ -3,6 +3,7 @@ import Head from 'next/head';
 import PageTemplate from '../../components/common/PageTemplate';
 import ReadNotice from '../../components/notices/ReadNotice';
 import { initApollo } from '../../libs/apollo';
+import useMe from '../../libs/hooks/useMe';
 import useReadNotice, { READ_NOTICE } from './hooks/useReadNotice';
 
 interface Props {
@@ -10,6 +11,7 @@ interface Props {
 }
 
 function ReadNoticePage({ notice }: Props) {
+  useMe();
   const {
     notice: data,
     me,

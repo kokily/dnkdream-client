@@ -3,6 +3,7 @@ import Head from 'next/head';
 import PageTemplate from '../../components/common/PageTemplate';
 import ListNotices from '../../components/notices/ListNotices';
 import { initApollo } from '../../libs/apollo';
+import useMe from '../../libs/hooks/useMe';
 import { isLogged } from '../../libs/store';
 import useListNotices from './hooks/useListNotices';
 import { LIST_NOTICES } from './hooks/useScrollNotices';
@@ -13,6 +14,7 @@ interface Props {
 }
 
 function NoticesPage({ metaBody, metaTags }: Props) {
+  useMe();
   const notices = useListNotices();
 
   return (

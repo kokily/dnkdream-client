@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { isLogged } from '../store';
 
-const ME = gql`
+export const ME = gql`
   query Me {
     Me {
       ok
