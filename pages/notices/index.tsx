@@ -32,6 +32,7 @@ function NoticesPage({ metaBody, metaTags }: Props) {
           onDetail={notices.onDetail}
           onTag={notices.onTag}
           me={isLogged()}
+          tag={notices.tag}
         />
       </PageTemplate>
     </>

@@ -48,6 +48,7 @@ export default function useListNotices() {
     onKeyPress,
     onDetail,
     onTag,
+    tag,
     loading,
     error,
   };

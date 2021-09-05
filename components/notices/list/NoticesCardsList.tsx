@@ -19,15 +19,21 @@ const Container = styled.div`
 interface Props {
   notices: NoticeType[];
   onDetail: (id: string) => void;
+  onTag: (tag: string) => void;
 }
 
-const NoticesCardsList: React.FC<Props> = ({ notices, onDetail }) => {
+const NoticesCardsList: React.FC<Props> = ({ notices, onDetail, onTag }) => {
   return (
     <Container>
       {notices && notices.length > 0 ? (
         <>
           {notices.map((notice) => (
-            <NoticeCard key={notice.id} notice={notice} onDetail={onDetail} />
+            <NoticeCard
+              key={notice.id}
+              notice={notice}
+              onDetail={onDetail}
+              onTag={onTag}
+            />
           ))}
         </>
       ) : (

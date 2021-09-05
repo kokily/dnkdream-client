@@ -53,6 +53,19 @@ const SearchBox = styled.div<{ small: boolean; me: boolean }>`
     `}
 `;
 
+const TagBox = styled.div`
+  width: 100%;
+
+  span {
+    cursor: pointer;
+    color: #6799ff;
+    transition: 0.2s all;
+    &:hover {
+      color: #f15f5f;
+    }
+  }
+`;
+
 interface Props {
   notices: NoticeType[];
   search: string;
@@ -64,6 +77,7 @@ interface Props {
   onDetail: (id: string) => void;
   onTag: (tag: string) => void;
   me: boolean;
+  tag: string;
 }
 
 const ListNotices: React.FC<Props> = ({
@@ -75,6 +89,7 @@ const ListNotices: React.FC<Props> = ({
   onDetail,
   onTag,
   me,
+  tag,
 }) => {
   const isSmall = useMedia('(max-width: 768px)');
 
@@ -88,6 +103,12 @@ const ListNotices: React.FC<Props> = ({
             </Link>
           )}
 
+          {tag !== '' && (
+            <TagBox>
+              선택된 태그: <span onClick={() => onTag('')}>#{tag}</span>
+            </TagBox>
+          )}
+
           <Search
             mode="제목"
             search={search}
@@ -97,7 +118,7 @@ const ListNotices: React.FC<Props> = ({
           />
         </SearchBox>
 
-        <NoticesCardsList notices={notices} onDetail={onDetail} />
+        <NoticesCardsList notices={notices} onDetail={onDetail} onTag={onTag} />
       </Contents>
     </Container>
   );

@@ -112,10 +112,11 @@ const Content = styled.div`
 
 interface Props {
   notice: NoticeType;
-  onDetail?: (id: string) => void;
+  onDetail: (id: string) => void;
+  onTag: (tag: string) => void;
 }
 
-const NoticeCard: React.FC<Props> = ({ notice, onDetail }) => {
+const NoticeCard: React.FC<Props> = ({ notice, onDetail, onTag }) => {
   return (
     <Container>
       <Layout>
@@ -132,7 +133,9 @@ const NoticeCard: React.FC<Props> = ({ notice, onDetail }) => {
           <p>{new Date(notice.created_at).toLocaleDateString()} 작성</p>
           <p className="tag">
             {notice.tags.slice(0, 3).map((tag) => (
-              <span key={tag}>#{tag}</span>
+              <span key={tag} onClick={() => onTag(tag)}>
+                #{tag}
+              </span>
             ))}
           </p>
         </Content>
