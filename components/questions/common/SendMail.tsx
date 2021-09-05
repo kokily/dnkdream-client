@@ -17,6 +17,13 @@ const Container = styled.div`
     font-weight: 600;
     margin: 0.5rem 0 0 0;
     color: #3036df;
+
+    &.list {
+      cursor: pointer;
+      &:hover {
+        color: #7377e6;
+      }
+    }
   }
 
   p {
@@ -127,6 +134,8 @@ interface Props {
       | React.ChangeEvent<HTMLTextAreaElement>
   ) => void;
   onAddQuestion: (e: React.MouseEvent) => void;
+  onListQuestions: () => void;
+  me: boolean;
 }
 
 const SendMail: React.FC<Props> = ({
@@ -137,10 +146,19 @@ const SendMail: React.FC<Props> = ({
   phone,
   onChange,
   onAddQuestion,
+  onListQuestions,
+  me,
 }) => {
   return (
     <Container>
-      <h2>질문 보내기</h2>
+      {me ? (
+        <h2 className="list" onClick={onListQuestions}>
+          질문 보내기
+        </h2>
+      ) : (
+        <h2>질문 보내기</h2>
+      )}
+
       <p>질문 내용을 관리자 이메일로 전송해드립니다.</p>
 
       <Form>

@@ -15,6 +15,8 @@ function QuestionPage() {
         phone={question.phone}
         onChange={question.onChange}
         onAddQuestion={question.onAddQuestion}
+        onListQuestions={question.onListQuestions}
+        me={question.me}
       />
     </PageTemplate>
   );

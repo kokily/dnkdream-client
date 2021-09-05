@@ -4,6 +4,7 @@ import { IoLocationOutline } from 'react-icons/io5';
 import { FaPhone } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { BiTimeFive } from 'react-icons/bi';
+import { media } from '../../../styles';
 
 // Styles
 const Container = styled.div`
@@ -18,9 +19,15 @@ const Container = styled.div`
 `;
 
 const Contents = styled.div`
+  margin-top: 1.6rem;
   margin-bottom: 4rem;
 
+  ${media.medium} {
+    margin-top: 4rem;
+  }
+
   h2 {
+    color: #3036df;
     margin: 0.5rem 0 0 0;
     line-height: 27px;
   }

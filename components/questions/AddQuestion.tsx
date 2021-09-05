@@ -38,6 +38,8 @@ interface Props {
       | React.ChangeEvent<HTMLTextAreaElement>
   ) => void;
   onAddQuestion: (e: React.MouseEvent) => void;
+  onListQuestions: () => void;
+  me: boolean;
 }
 
 const AddQuestion: React.FC<Props> = ({
@@ -48,6 +50,8 @@ const AddQuestion: React.FC<Props> = ({
   phone,
   onChange,
   onAddQuestion,
+  onListQuestions,
+  me,
 }) => {
   return (
     <Container>
@@ -60,6 +64,8 @@ const AddQuestion: React.FC<Props> = ({
           phone={phone}
           onChange={onChange}
           onAddQuestion={onAddQuestion}
+          onListQuestions={onListQuestions}
+          me={me}
         />
         <Info />
       </Layout>

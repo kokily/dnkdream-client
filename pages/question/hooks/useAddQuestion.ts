@@ -2,6 +2,7 @@ import React, { useCallback, useReducer } from 'react';
 import { gql, useMutation } from '@apollo/react-hooks';
 import { toast } from 'react-toastify';
 import { useRouter } from 'next/router';
+import { isLogged } from '../../../libs/store';
 
 export const ADD_QUESTION = gql`
   mutation AddQuestion(
@@ -89,6 +90,10 @@ export default function useAddQuestion() {
     }
   };
 
+  const onListQuestions = () => {
+    router.push('/questions');
+  };
+
   return {
     title,
     body,
@@ -97,5 +102,7 @@ export default function useAddQuestion() {
     phone,
     onChange,
     onAddQuestion,
+    onListQuestions,
+    me: isLogged(),
   };
 }
