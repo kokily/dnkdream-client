@@ -44,20 +44,20 @@ function NoticesPage({ metaBody, metaTags }: Props) {
 export const getServerSideProps: GetServerSideProps = async () => {
   const apollo = initApollo();
 
-  const notices = await apollo.query<{
+  const query = await apollo.query<{
     ListNotices: { notices: NoticeType[] };
   }>({
     query: LIST_NOTICES,
   });
 
-  const metaBody = notices?.data.ListNotices.notices.map((notice) => {
+  const metaBody = query?.data.ListNotices.notices.map((notice) => {
     return notice.body
       .replace(/ /gi, '')
       .replace(/(<([^>]+)>)/gi, '')
       .substring(0, 50);
   });
 
-  const metaTags = notices?.data.ListNotices.notices.map((notice) => {
+  const metaTags = query?.data.ListNotices.notices.map((notice) => {
     return notice.tags.join();
   });
 

@@ -129,7 +129,7 @@ const NoticeCard: React.FC<Props> = ({ notice, onDetail, onTag }) => {
         )}
 
         <Content>
-          <h4>{notice.title}</h4>
+          <h4 onClick={() => onDetail(notice.id)}>{notice.title}</h4>
           <p>{new Date(notice.created_at).toLocaleDateString()} 작성</p>
           <p className="tag">
             {notice.tags.slice(0, 3).map((tag) => (

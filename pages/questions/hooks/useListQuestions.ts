@@ -13,7 +13,7 @@ type ActionProps = {
   value: string;
 };
 
-type SelectType = 'title' | 'name' | 'email' | null;
+export type SelectType = 'title' | 'name' | 'email' | null;
 
 const reducer = (state: StateProps, action: ActionProps) => {
   return {
