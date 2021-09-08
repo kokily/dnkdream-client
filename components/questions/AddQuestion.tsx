@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { media } from '../../styles';
-import Info from './common/Info';
-import SendMail from './common/SendMail';
+import Info from './add/Info';
+import SendMail from './add/SendMail';
 
 // Styles
 const Container = styled.div`

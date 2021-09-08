@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { media } from '../../../styles';
-import RemoveModal from './RemoveModal';
+import RemoveModal from '../../common/RemoveModal';
 
 // Styles
 const Container = styled.div`

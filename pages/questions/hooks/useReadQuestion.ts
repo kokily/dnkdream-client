@@ -89,11 +89,16 @@ export default function useReadQuestion() {
     }
   };
 
+  const onBack = () => {
+    router.back();
+  };
+
   return {
     question: data?.ReadQuestion.question || null,
     loading,
     error,
     onConfirm,
     onRemove,
+    onBack,
   };
 }
