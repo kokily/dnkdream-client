@@ -1,38 +1,10 @@
+import About from '../components/about/About';
 import PageTemplate from '../components/common/PageTemplate';
 
 function AboutPage() {
   return (
     <PageTemplate>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
+      <About />
     </PageTemplate>
   );
 }
