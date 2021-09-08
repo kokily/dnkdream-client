@@ -1,53 +1,10 @@
 import PageTemplate from '../components/common/PageTemplate';
+import HomePage from '../components/home/HomePage';
 
 function IndexPage() {
   return (
     <PageTemplate>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
+      <HomePage />
     </PageTemplate>
   );
 }
