@@ -12,12 +12,17 @@ const GridLayout = styled.div`
   display: grid;
   width: 100%;
   grid-template-columns: repeat(3, 33.3333%);
-  grid-template-rows: repeat(4, 250px);
+  grid-template-rows: repeat(4, 450px);
 
   .item {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   .item1 {
@@ -60,9 +65,15 @@ const HomePage: React.FC<Props> = ({}) => {
   return (
     <Container>
       <GridLayout>
-        <div className="item item1">괜히 PBC 기판 이미지 넣고...</div>
-        <div className="item item2">Java, react 등 코딩 내용</div>
-        <div className="item item3">컴퓨터, DID 수리 등 내용</div>
+        <div className="item item1">
+          <img src="/images/pcb.png" alt="DID, PC 수리" />
+        </div>
+        <div className="item item2">
+          <img src="/images/coding.png" alt="Coding" />
+        </div>
+        <div className="item item3">
+          <img src="/images/repair.png" alt="PC Repair" />
+        </div>
         <div className="item item4">인터넷 구매대행, 소모품 등 내용</div>
         <div className="item item5">D&K Dream 로고</div>
       </GridLayout>
