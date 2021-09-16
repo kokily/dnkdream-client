@@ -3,6 +3,9 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import { media } from '../../../styles';
 import Logo from '../logo.svg';
+import { isLogged } from '../../../libs/store';
+import TopButtons from './TopButtons';
+import useLogout from '../../../libs/hooks/useLogout';
 
 // Styles
 const Container = styled.div`
@@ -26,6 +29,8 @@ const Container = styled.div`
 interface Props {}
 
 const Top: React.FC<Props> = ({}) => {
+  const { onLogout, onList } = useLogout();
+
   return (
     <Container>
       <Link href="/">
@@ -34,7 +39,7 @@ const Top: React.FC<Props> = ({}) => {
         </a>
       </Link>
 
-      {/* Todo Component */}
+      {isLogged() && <TopButtons onLogout={onLogout} onList={onList} />}
     </Container>
   );
 };

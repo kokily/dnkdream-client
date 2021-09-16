@@ -2,6 +2,7 @@ import React from 'react';
 import { gql, useMutation } from '@apollo/react-hooks';
 import { toast } from 'react-toastify';
 import { isLogged } from '../store';
+import { useRouter } from 'next/router';
 
 const LOGOUT = gql`
   mutation Logout {
@@ -13,6 +14,7 @@ const LOGOUT = gql`
 `;
 
 export default function useLogout() {
+  const router = useRouter();
   const [Logout, { client }] = useMutation(LOGOUT);
 
   const onLogout = async () => {
@@ -21,9 +23,8 @@ export default function useLogout() {
 
       if (!response || !response.data) return;
 
-      await client.clearStore();
-
       isLogged(false);
+      await client.clearStore();
 
       document.location.href = '/';
     } catch (err) {
@@ -31,5 +32,9 @@ export default function useLogout() {
     }
   };
 
-  return { onLogout };
+  const onList = () => {
+    router.push('/questions');
+  };
+
+  return { onLogout, onList };
 }

@@ -25,7 +25,10 @@ function App({ Component, pageProps }: AppProps) {
           name="keywords"
           content="소모품 인터넷 구매 대행, 컴퓨터 및 DID 정비"
         />
-        <meta name="description" content="" />
+        <meta
+          name="description"
+          content="소모품 인터넷 구매 대행, 컴퓨터 및 DID 정비, 비교견적 발행"
+        />
         <meta name="author" content="dnkdream.com" />
         <meta property="og:title" content="D&K Dream" />
         <meta property="og:description" content="" />

@@ -1,3 +1,3 @@
 import { makeVar } from '@apollo/client';
 
-export const isLogged = makeVar(false);
+export const isLogged = makeVar<boolean>(false);

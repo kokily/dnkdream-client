@@ -44,9 +44,8 @@ export default function useLogin() {
 
       if (!response || !response.data) return;
 
-      await client.clearStore();
-
       isLogged(true);
+      await client.clearStore();
 
       router.replace('/');
     } catch (err) {
