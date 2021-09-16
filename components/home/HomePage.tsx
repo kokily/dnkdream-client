@@ -74,8 +74,15 @@ const HomePage: React.FC<Props> = ({}) => {
         <div className="item item3">
           <img src="/images/repair.png" alt="PC Repair" />
         </div>
-        <div className="item item4">인터넷 구매대행, 소모품 등 내용</div>
-        <div className="item item5">D&K Dream 로고</div>
+        <div className="item item4">
+          <img src="/images/truck.png" alt="Buyer, Purchasing agent" />
+        </div>
+        <div className="item item5">
+          <img
+            src="/images/big-logo.png"
+            alt="D&K Dream, Programming, PC Repair"
+          />
+        </div>
       </GridLayout>
     </Container>
   );
