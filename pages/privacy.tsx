@@ -1,38 +1,10 @@
 import PageTemplate from '../components/common/PageTemplate';
+import Privacy from '../components/privacy/Privacy';
 
 function PrivacyPage() {
   return (
     <PageTemplate>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
-      <h2>Index Page</h2>
+      <Privacy />
     </PageTemplate>
   );
 }
