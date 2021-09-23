@@ -1,7 +1,7 @@
 import React, { useCallback, useReducer } from 'react';
-import { gql, useMutation } from '@apollo/react-hooks';
-import { toast } from 'react-toastify';
 import { useRouter } from 'next/router';
+import { gql, useMutation } from '@apollo/client';
+import { toast } from 'react-toastify';
 import { isLogged } from '../../../libs/store';
 
 export const ADD_QUESTION = gql`

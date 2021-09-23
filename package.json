@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@apollo/client": "3.4.10",
-    "@apollo/react-hooks": "4.0.0",
     "@svgr/webpack": "5.5.0",
     "codemirror": "5.62.3",
     "date-fns": "2.23.0",

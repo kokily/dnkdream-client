@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { gql, useQuery, useMutation } from '@apollo/react-hooks';
+import { gql, useQuery, useMutation } from '@apollo/client';
 import { toast } from 'react-toastify';
 import { isLogged } from '../../../libs/store';
 

@@ -1,5 +1,5 @@
-import { useQuery, gql } from '@apollo/react-hooks';
 import { useCallback, useState } from 'react';
+import { useQuery, gql } from '@apollo/client';
 import useScroll from '../../../libs/hooks/useScroll';
 
 export const LIST_NOTICES = gql`

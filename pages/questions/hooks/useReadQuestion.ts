@@ -1,10 +1,5 @@
-import {
-  gql,
-  useQuery,
-  useMutation,
-  useApolloClient,
-} from '@apollo/react-hooks';
 import { useRouter } from 'next/router';
+import { gql, useQuery, useMutation, useApolloClient } from '@apollo/client';
 import { toast } from 'react-toastify';
 
 export const READ_QUESTION = gql`

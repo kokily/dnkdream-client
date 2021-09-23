@@ -1,5 +1,5 @@
-import { useQuery } from '@apollo/react-hooks';
 import { useEffect } from 'react';
+import { useQuery } from '@apollo/client';
 import { isLogged } from '../store';
 import { ME } from './useAuth';
 

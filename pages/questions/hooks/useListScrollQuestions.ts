@@ -1,5 +1,5 @@
-import { gql, useQuery } from '@apollo/react-hooks';
 import { useCallback, useState } from 'react';
+import { gql, useQuery } from '@apollo/client';
 import useScroll from '../../../libs/hooks/useScroll';
 
 export const LIST_QUESTIONS = gql`

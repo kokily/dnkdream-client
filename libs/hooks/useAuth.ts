@@ -1,6 +1,6 @@
-import { useQuery, gql } from '@apollo/react-hooks';
-import { useRouter } from 'next/router';
 import { useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { useQuery, gql } from '@apollo/client';
 import { isLogged } from '../store';
 
 export const ME = gql`

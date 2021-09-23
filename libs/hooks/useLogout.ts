@@ -1,8 +1,7 @@
-import React from 'react';
-import { gql, useMutation } from '@apollo/react-hooks';
+import { gql, useMutation } from '@apollo/client';
+import { useRouter } from 'next/router';
 import { toast } from 'react-toastify';
 import { isLogged } from '../store';
-import { useRouter } from 'next/router';
 
 const LOGOUT = gql`
   mutation Logout {

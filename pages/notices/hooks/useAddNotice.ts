@@ -1,11 +1,6 @@
-import {
-  useApolloClient,
-  gql,
-  useQuery,
-  useMutation,
-} from '@apollo/react-hooks';
-import { useRouter } from 'next/router';
 import React, { useCallback, useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
+import { useApolloClient, gql, useQuery, useMutation } from '@apollo/client';
 import { toast } from 'react-toastify';
 import { devServer, isProd, prodServer } from '../../../libs/constants';
 
